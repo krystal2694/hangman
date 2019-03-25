@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <html>    
+        <head>
+            <title> Hangman Game </title>
+        <style>   
+            button {
+                font-size: 100%;
+            }
+
+        </style>
+    </head>
+        
+<body>
+    <script>
+
+        function buttons(){
+            var empty_arr = [];
+            for (let i = 0; i <= 25; i++) {  
+                let btn = document.createElement("button");  
+                document.body.appendChild(btn);
+                btn.innerHTML = '&#' + (65+i);
+                empty_arr.push(btn);
+            }
+        }
+        buttons()    
+
+        myButton = document.getElementsByTagName("button")
+        
+        for (let i = 0; i <= 25; i++) {
+            myButton[i].addEventListener("click", function(){
+                alphabet = myButton[i].innerHTML;
+                console.log("Button " + alphabet + " is clicked.")
+            });
+        }
+
+        </script>
+    </body>
+</html>
+
