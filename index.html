@@ -1,39 +1,38 @@
 <!DOCTYPE html>
     <html>    
         <head>
-            <title> Hangman Game </title>
-        <style>   
-            button {
-                font-size: 100%;
-            }
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <link rel="stylesheet" type="text/css" href="main.css">
+            <link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
+            <script src="main.js"></script>
 
-        </style>
+            <title>Hangman</title>
     </head>
         
 <body>
+    <h1 id="title">Movie Themed Hangman</h1>
+    <div id="hangmanContainer">
+        <div id="hangmanImage">
+
+        </div>
+    </div>
+
+    <div >
+        <pre id="hiddenPhrase"></pre>
+    </div>
+    <div id="buttonParent">
+        <div id="buttons"></div>
+    </div>
+    <div id="hint">
+
+    </div>
     <script>
+        createButtons()
+        displayPhrase()
+    </script>
 
-        function buttons(){
-            var empty_arr = [];
-            for (let i = 0; i <= 25; i++) {  
-                let btn = document.createElement("button");  
-                document.body.appendChild(btn);
-                btn.innerHTML = '&#' + (65+i);
-                empty_arr.push(btn);
-            }
-        }
-        buttons()    
-
-        myButton = document.getElementsByTagName("button")
-        
-        for (let i = 0; i <= 25; i++) {
-            myButton[i].addEventListener("click", function(){
-                alphabet = myButton[i].innerHTML;
-                console.log("Button " + alphabet + " is clicked.")
-            });
-        }
-
-        </script>
-    </body>
+</body>
 </html>
 

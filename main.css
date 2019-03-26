@@ -1,0 +1,21 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Kalam';
+}
+
+#title {
+    text-align: center;
+}
+
+#hiddenPhrase {
+    text-align: center;
+}
+
+#buttonParent {
+    text-align: center;
+}
+
+#buttons {
+    display: inline-block;
+}
