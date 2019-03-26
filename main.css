@@ -19,3 +19,13 @@ body {
 #buttons {
     display: inline-block;
 }
+
+#hangmanContainer {
+    text-align: center;
+}
+
+#hangmanImage {
+    display: inline-block;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
