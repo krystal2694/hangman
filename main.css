@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-image: url("images/background.jpg");
     color: white;
     font-family: 'Kalam';
 }
@@ -18,7 +18,13 @@ body {
 
 #buttons {
     display: inline-block;
+    
 }
+button {
+    font-size: 25px;
+
+}
+
 
 #hangmanContainer {
     text-align: center;
