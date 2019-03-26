@@ -25,6 +25,9 @@ button {
 
 }
 
+#scoreboard {
+    position: absolute;
+}
 
 #hangmanContainer {
     text-align: center;

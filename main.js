@@ -1,3 +1,4 @@
+let lives = 7;
 function createButtons() {
     for (let i = 1; i <=26; i++) {
         let btn = document.createElement("button");
@@ -11,6 +12,8 @@ function createButtons() {
         btn.style.height = "30px";
 
         btn.addEventListener("click", function() {
+            // document.getElementById('score').innerHTML= lives-= 1;
+            displayLives()
             console.log("Button " + String.fromCharCode(i + 64) + " was clicked");
             btn.disabled = true;
             console.log(checkCharacter(btn.innerHTML));
@@ -20,6 +23,14 @@ function createButtons() {
     };
 };
 
+function displayLives(){
+    if (lives == 1) {
+        document.getElementById('score').innerHTML = 'You lost!'
+        btn.disabled = true;
+    } else {
+        document.getElementById('score').innerHTML= lives-= 1;
+    }
+}
 let movies = ["CITIZEN KANE", "CAPTAIN MARVEL", "THE GODFATHER", "SPIRITED AWAY",
 "PULP FICTION", "BOHEMIAN RHAPSODY", "SLEEPING BEAUTY", "SHUTTER ISLAND",
 "SAVING PRIVATE RYAN", "COMMITEE"];
