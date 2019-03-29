@@ -27,8 +27,6 @@ function displayLives(){
     if (lives == 1) {
         document.getElementById('score').innerHTML = 'You lost!'
         btn.disabled = true;
-    } else {
-        document.getElementById('score').innerHTML= lives-= 1;
     }
 }
 let movies = ["CITIZEN KANE", "CAPTAIN MARVEL", "THE GODFATHER", "SPIRITED AWAY",
@@ -54,8 +52,10 @@ function displayPhrase() {
 
 function checkCharacter(value){
     if (movie.includes(value)) {
+        document.getElementById('score').innerHTML= lives-= 0;
         return true;
     } else {
+        document.getElementById('score').innerHTML= lives-= 1;
         return false;
     }
 }
