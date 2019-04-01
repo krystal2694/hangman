@@ -6,16 +6,14 @@
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <link rel="stylesheet" type="text/css" href="main.css">
             <link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
-            <script src="main.js"></script>
-
             <title>Hangman</title>
     </head>
         
 <body>
     <h1 id="title">Movie Themed Hangman</h1>
     <div id="hangmanContainer">
-        <div id="hangmanImage">
-            <img src = "./images/hangman_0.png" width = "50%" />
+        <div>
+            <img id="hangmanImage" src = "./images/hangman_0.png"/>
 
         </div>
     </div>
@@ -33,13 +31,10 @@
     <div id='scoreContainer'>
         <h3>Your Lives: <h3 id='score'>7</h3></h3>
     </div>
-
+    <div id='resetContainer'>
+        <button id=resetButton>Reset</button>
     </div>
-    <script>
-        createButtons()
-        displayPhrase()
-    </script>
-
+    <script src='main.js'></script>
 </body>
 </html>
 

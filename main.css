@@ -1,9 +1,14 @@
 body {
-    background-image: url("images/background.jpg");
     color: white;
     font-family: 'Kalam';
+    background-color: black;
 }
-
+.letters {
+    border-radius: 4px;
+    width: 35px;
+    height: 30px;
+    background-color: pink;
+}
 #title {
     text-align: center;
 }
@@ -35,6 +40,5 @@ button {
 
 #hangmanImage {
     display: inline-block;
-    /* margin-left: auto;
-    margin-right: auto; */
+    width: 30%;
 }
