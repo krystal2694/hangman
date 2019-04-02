@@ -10,30 +10,36 @@
     </head>
         
 <body>
-    <h1 id="title">Movie Themed Hangman</h1>
+    <div id="container">
+
+    <p id="title">Movie Themed Hangman</p>
+    
+    <div class = "display_box">
+    <div class = "flex_container">
+        <div id="box"> Your Score <h3 id='score'>0</h3></div>
+        <div id="box"> Your Lives <h3 id='lives'>7</h3></div>
+    </div>
+</div>
+
+
+  
     <div id="hangmanContainer">
-        <div>
+       
             <img id="hangmanImage" src = "./images/hangman_0.png"/>
 
         </div>
-    </div>
 
-    <div >
         <pre id="hiddenPhrase"></pre>
-    </div>
-    <br>
-    
+        <p id="definition">Definition Here</p>
+  
     <div id="buttonParent">
         <div id="buttons"></div>
     </div>
-    <div id="hint">
-    
-    <div id='scoreContainer'>
-        <h3>Your Lives: <h3 id='score'>7</h3></h3>
-    </div>
+    <br>
     <div id='resetContainer'>
         <button id=resetButton>Reset</button>
     </div>
+</div>
     <script src='main.js'></script>
 </body>
 </html>

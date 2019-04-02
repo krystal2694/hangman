@@ -1,9 +1,18 @@
 let movies = ["CITIZEN KANE", "CAPTAIN MARVEL", "THE GODFATHER", "SPIRITED AWAY",
 "PULP FICTION", "BOHEMIAN RHAPSODY", "SLEEPING BEAUTY", "SHUTTER ISLAND",
 "SAVING PRIVATE RYAN", "COMMITEE"];
+
+let movies_define = ["Key word: Rosebud", "An extraterrestrial Kree warrior", "Based on Mario Puzo's novel",
+"Animated feature by noted Japanese director Hayao Miyazaki", "Based on a story by Tarantino and Roger Avary",
+"Key words: Queen & Freddie Mercury", "A classic fairy-tale about Little Briar Rose",
+"Summary: A U.S. Marshal investigaes the disappearance of a murderer, who escaped from a hospital for the criminally insane.",
+"Summary: A group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",
+"Definition: A group of people appointed for a specific function."]
+
 let lives = 7;
 let movie = generateMovie()
 let hiddenPhrase = [];
+let score = 0;
 createButtons()
 displayPhrase(movie)
 document.getElementById('resetButton').onclick = resetButton;
@@ -17,12 +26,19 @@ function resetButton(){
     displayPhrase(generateMovie());
     lives = 7;
     changeImages();
-    document.getElementById('score').innerHTML = 7
+    document.getElementById('lives').innerHTML = 7
 }
 
 function generateMovie(){
-    let movie = movies[Math.floor(Math.random() * movies.length)];
+    let randomNum = Math.floor(Math.random() * movies.length);
+    let movie = movies[randomNum];
+    displayDefinition(randomNum);
     return movie
+}
+
+
+function displayDefinition(randomNum){
+    document.getElementById("definition").innerHTML = movies_define[randomNum];
 }
 
 function createButtons() {
@@ -71,7 +87,7 @@ function changeImages(){
 
 function displayLives(){
     if (lives == 0) {
-        document.getElementById('score').innerHTML = 'You lost!';
+        document.getElementById('lives').innerHTML = 'You lost!';
     };
 }
 
@@ -91,10 +107,14 @@ function displayPhrase(movie) {
 function checkCharacter(value){
     while (lives !== 0){
         if (movie.includes(value)) {
-            document.getElementById('score').innerHTML= lives;
+            document.getElementById('lives').innerHTML= lives;
             return true;
         } else {
-            document.getElementById('score').innerHTML= lives-= 1;
+            document.getElementById('lives').innerHTML= lives-= 1;
+            if (score > 0) {
+                score -= 1;
+            }
+            displayScore();
             return false;
         }
     }
@@ -103,9 +123,14 @@ function checkCharacter(value){
 function revealCharacter(value) {
     for (let i = 0; i < movie.length; i++) {
         if (movie[i] == value) {
+            score += 1;
             hiddenPhrase.splice(i, 1, value);
+            displayScore();
         }
     }
-    document.getElementById("hiddenPhrase").innerHTML = hiddenPhrase.join("");
-    
+    document.getElementById("hiddenPhrase").innerHTML = hiddenPhrase.join("");    
+}
+
+function displayScore() {
+    document.getElementById("score").innerHTML = score;
 }

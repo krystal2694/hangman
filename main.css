@@ -1,20 +1,31 @@
 body {
     color: white;
-    font-family: 'Kalam';
-    background-color: black;
+    font-family: 'Bebas Neue';
+    background-color:black;
+
 }
+
+p, h3{
+    margin: 5px;
+}
+
 .letters {
-    border-radius: 4px;
-    width: 35px;
-    height: 30px;
-    background-color: pink;
+    border-radius: 10px;
+    width: 40px;
+    height: 36px;
+    background-color: white;
+    /* color: navy; */
 }
 #title {
     text-align: center;
+    font-size: 50px;
 }
 
 #hiddenPhrase {
     text-align: center;
+    font-size: 30px;
+    margin: 0px;
+    padding: 0px;
 }
 
 #buttonParent {
@@ -27,7 +38,8 @@ body {
 }
 button {
     font-size: 25px;
-
+    margin: 5px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #scoreboard {
@@ -36,9 +48,45 @@ button {
 
 #hangmanContainer {
     text-align: center;
+    height: 420px;
+}
+
+#hangmanBox {
+    margin: 0px;
 }
 
 #hangmanImage {
     display: inline-block;
-    width: 30%;
+    width: 40%;
+}
+#resetContainer {
+    text-align: center;
+}
+
+#container {
+    text-align: center;
+}
+.flex_container {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0px;
+   
+}
+.flex_container, #box {
+    
+    width:500px;
+    margin: 10px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 20px;
+}
+.display_box {
+    display: inline-block;
+    height: 50px;
+}
+#definition {
+    font-size: 20px;
+    color: yellow;
+    padding: 10px;
+    font-family: 'ariel', sans-serif;
 }
