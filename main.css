@@ -48,7 +48,7 @@ button {
 }
 
 #scoreboard {
-    position: absolute;
+    position: relative;
 }
 
 #hangmanContainer {
