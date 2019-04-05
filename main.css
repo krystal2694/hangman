@@ -11,26 +11,26 @@ body {
 }
 
 p, h3{
-    margin: 5px;
+    margin: 0.3em;
 }
 
 .letters {
-    border-radius: 10px;
-    width: 40px;
-    height: 36px;
+    border-radius: 0.625em;
+    width: 2.5em;
+    height: 2.25em;
     background-color: white;
     /* color: navy; */
 }
 #title {
     text-align: center;
-    font-size: 50px;
+    font-size: 3.125em;
 }
 
 #hiddenPhrase {
     text-align: center;
-    font-size: 30px;
-    margin: 0px;
-    padding: 0px;
+    font-size: 1.875em;
+    margin: 0em;
+    padding: 0em;
 }
 
 #buttonParent {
@@ -42,8 +42,8 @@ p, h3{
     
 }
 button {
-    font-size: 25px;
-    margin: 5px;
+    font-size: 1.5625em;
+    margin: 0.3125em;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -53,11 +53,11 @@ button {
 
 #hangmanContainer {
     text-align: center;
-    height: 420px;
+    height: 40%;
 }
 
 #hangmanBox {
-    margin: 0px;
+    margin: 0em;
 }
 
 #hangmanImage {
@@ -74,24 +74,24 @@ button {
 .flex_container {
     display: flex;
     flex-wrap: nowrap;
-    margin: 0px;
+    margin: 0em;
    
 }
 .flex_container, #box {
     
-    width:500px;
-    margin: 10px;
+    width:31.25em;
+    margin: 0.625em;
     text-align: center;
-    line-height: 20px;
-    font-size: 20px;
+    line-height: 1.25em;
+    font-size: 1.25em;
 }
 .display_box {
     display: inline-block;
-    height: 50px;
+    height: 3.125em;
 }
 #definition {
-    font-size: 20px;
+    font-size: 1.25em;
     color: yellow;
-    padding: 10px;
+    padding: 0.625em;
     font-family: 'ariel', sans-serif;
 }
