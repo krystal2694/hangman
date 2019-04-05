@@ -8,11 +8,12 @@ let movies_define = ["Key word: Rosebud", "An extraterrestrial Kree warrior", "B
 "Summary: A U.S. Marshal investigaes the disappearance of a murderer, who escaped from a hospital for the criminally insane.",
 "Summary: A group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",
 "Definition: A group of people appointed for a specific function."]
-
 let lives = 7;
+let score = 0;
+document.getElementById('lives').innerHTML = lives;
+displayScore();
 let movie = generateMovie()
 let hiddenPhrase = [];
-let score = 0;
 createButtons()
 displayPhrase(movie)
 document.getElementById('resetButton').onclick = resetButton;
@@ -23,10 +24,13 @@ function resetButton(){
     createButtons();
     document.getElementById('hiddenPhrase').innerHTML = '';
     hiddenPhrase = [];
-    displayPhrase(generateMovie());
+    movie = generateMovie();
+    displayPhrase(movie);
     lives = 7;
+    score = 0;
     changeImages();
-    document.getElementById('lives').innerHTML = 7
+    document.getElementById('lives').innerHTML = lives;
+    displayScore();
 }
 
 function generateMovie(){
@@ -55,13 +59,15 @@ function createButtons() {
 };
 
 function clickButton(btn) {
-    if (lives != 0) {
+    if ((lives != 0) && (hiddenPhrase.join("").includes("_") == true)) {
         checkCharacter(btn.innerHTML);
         revealCharacter(btn.innerHTML);
-        displayLives();
-        console.log(lives);
+        losingMessage();
         changeImages();
         btn.disabled = true;
+        if (hiddenPhrase.join("").includes("_") == false) {
+        playerWon();
+        };
     }
 }
 
@@ -85,7 +91,7 @@ function changeImages(){
     }
 }
 
-function displayLives(){
+function losingMessage(){
     if (lives == 0) {
         document.getElementById('lives').innerHTML = 'You lost!';
     };
@@ -127,10 +133,21 @@ function revealCharacter(value) {
             hiddenPhrase.splice(i, 1, value);
             displayScore();
         }
+
     }
     document.getElementById("hiddenPhrase").innerHTML = hiddenPhrase.join("");    
 }
 
 function displayScore() {
     document.getElementById("score").innerHTML = score;
+}
+
+function playerWon(){
+    document.getElementById("lives").innerHTML = "You Won!";
+    setTimeout(function () {
+        let userName = prompt("Please enter your name:");
+        window.alert('Congratulations! ' + userName + ' your score is: ' + String(score));
+    }, 1000);
+
+
 }
