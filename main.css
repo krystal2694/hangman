@@ -53,6 +53,7 @@ button {
 }
 
 #hangmanContainer {
+    position: relative;
     text-align: center;
     height: 40%;
 }
@@ -70,6 +71,7 @@ button {
 }
 
 #container {
+    position: relative;
     text-align: center;
 }
 .flex_container {
