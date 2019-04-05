@@ -7,7 +7,7 @@ body {
     color: white;
     font-family: 'Bebas Neue';
     background-color:black;
-
+    min-width: 620px;
 }
 
 p, h3{
@@ -55,7 +55,7 @@ button {
 #hangmanContainer {
     position: relative;
     text-align: center;
-    height: 40%;
+    min-height: 500px;
 }
 
 #hangmanBox {
@@ -64,10 +64,21 @@ button {
 
 #hangmanImage {
     display: inline-block;
-    width: 40%;
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    max-width: 500px;
+    position: relative;
+    top: 3em;
 }
+
 #resetContainer {
     text-align: center;
+}
+
+#resetButton {
+    display: inline-block;
+    background-color: white;
 }
 
 #container {
@@ -91,6 +102,7 @@ button {
 .display_box {
     display: inline-block;
     height: 3.125em;
+    text-align: center;
 }
 #definition {
     font-size: 1.25em;

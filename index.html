@@ -12,34 +12,34 @@
 <body>
     <div id="container">
 
-    <p id="title">Movie Themed Hangman</p>
+        <p id="title">Movie Themed Hangman</p>
+        
+        <div class = "display_box">
+            <div class = "flex_container">
+                <div id="box"> Your Score <h3 id='score'></h3></div>
+                <div id="box"> Your Lives <h3 id='lives'></h3></div>
+            </div>
+        </div>
+
+
     
-    <div class = "display_box">
-    <div class = "flex_container">
-        <div id="box"> Your Score <h3 id='score'></h3></div>
-        <div id="box"> Your Lives <h3 id='lives'></h3></div>
-    </div>
-</div>
-
-
-  
-    <div id="hangmanContainer">
-       
-            <img id="hangmanImage" src = "./images/hangman_0.png"/>
+        <div id="hangmanContainer">
+        
+                <img id="hangmanImage" src = "./images/hangman_0.png"/>
 
         </div>
 
-        <pre id="hiddenPhrase"></pre>
-        <p id="definition">Definition Here</p>
-  
-    <div id="buttonParent">
-        <div id="buttons"></div>
+            <pre id="hiddenPhrase"></pre>
+            <p id="definition">Definition Here</p>
+    
+        <div id="buttonParent">
+            <div id="buttons"></div>
+        </div>
+        <br>
+        <div id='resetContainer'>
+            <button id=resetButton>Reset</button>
+        </div>
     </div>
-    <br>
-    <div id='resetContainer'>
-        <button id=resetButton>Reset</button>
-    </div>
-</div>
     <script src='main.js'></script>
 </body>
 </html>
