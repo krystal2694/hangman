@@ -22,6 +22,7 @@ p, h3{
     /* color: navy; */
 }
 #title {
+    position: relative;
     text-align: center;
     font-size: 3.125em;
 }
