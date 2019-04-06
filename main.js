@@ -146,7 +146,7 @@ function playerWon(){
     document.getElementById("lives").innerHTML = "You Won!";
     setTimeout(function () {
         let userName = prompt("Please enter your name:");
-        window.alert('Congratulations! ' + userName + ' your score is: ' + String(score));
+        window.alert('Congratulations ' + userName + '!\nYour score is: ' + String(score));
     }, 1000);
 
 

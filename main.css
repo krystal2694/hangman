@@ -14,17 +14,42 @@ p, h3{
     margin: 0.3em;
 }
 
-.letters {
+.letters, #resetButton {
+    background-color: white;
+    color: #494949;
+    text-transform: uppercase;
+    background: #ffffff;
+    border: 4px solid #494949;
     border-radius: 0.625em;
+    display: inline-block;
+}
+
+.letters{
     width: 2.5em;
     height: 2.25em;
-    background-color: white;
-    /* color: navy; */
+}
+
+.letters:hover, .letters:disabled, #resetButton:hover {
+    color: #ffffff;
+    background: palevioletred;
+    border-color: palevioletred;
+    transition: all 0.4s ease 0s;
+    }
+
+#resetContainer {
+    text-align: center;
+}
+
+#resetButton {
+    position: relative;
+    top: -4.5em;
+    font-size: 1.3em;
+    padding: 0.3em;
 }
 #title {
     position: relative;
     text-align: center;
-    font-size: 3.125em;
+    font-size: 2em;
 }
 
 #hiddenPhrase {
@@ -40,7 +65,8 @@ p, h3{
 
 #buttons {
     display: inline-block;
-    
+    position: relative;
+    top: -4em;
 }
 button {
     font-size: 1.5625em;
@@ -72,13 +98,9 @@ button {
     top: 3em;
 }
 
-#resetContainer {
-    text-align: center;
-}
-
-#resetButton {
-    display: inline-block;
-    background-color: white;
+#phraseContainer {
+    position: relative;
+    top: -4em;
 }
 
 #container {
@@ -103,6 +125,7 @@ button {
     display: inline-block;
     height: 3.125em;
     text-align: center;
+    font-size: 0.8em;
 }
 #definition {
     font-size: 1.25em;
