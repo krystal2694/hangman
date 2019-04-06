@@ -5,7 +5,7 @@ let movies = ["CITIZEN KANE", "CAPTAIN MARVEL", "THE GODFATHER", "SPIRITED AWAY"
 let movies_define = ["Key word: Rosebud", "An extraterrestrial Kree warrior", "Based on Mario Puzo's novel",
 "Animated feature by noted Japanese director Hayao Miyazaki", "Based on a story by Tarantino and Roger Avary",
 "Key words: Queen & Freddie Mercury", "A classic fairy-tale about Little Briar Rose",
-"Summary: A U.S. Marshal investigaes the disappearance of a murderer, who escaped from a hospital for the criminally insane.",
+"Summary: A U.S. Marshal investigates the disappearance of a murderer, who escaped from a hospital for the criminally insane.",
 "Summary: A group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",
 "Definition: A group of people appointed for a specific function."]
 let lives = 7;
