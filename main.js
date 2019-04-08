@@ -1,13 +1,15 @@
 let movies = ["CITIZEN KANE", "CAPTAIN MARVEL", "THE GODFATHER", "SPIRITED AWAY",
 "PULP FICTION", "BOHEMIAN RHAPSODY", "SLEEPING BEAUTY", "SHUTTER ISLAND",
-"SAVING PRIVATE RYAN", "COMMITEE"];
+"SAVING PRIVATE RYAN", "COMMITEE", "TATTO", "ELECTRICITY"];
 
 let movies_define = ["Key word: Rosebud", "An extraterrestrial Kree warrior", "Based on Mario Puzo's novel",
 "Animated feature by noted Japanese director Hayao Miyazaki", "Based on a story by Tarantino and Roger Avary",
 "Key words: Queen & Freddie Mercury", "A classic fairy-tale about Little Briar Rose",
 "Summary: A U.S. Marshal investigates the disappearance of a murderer, who escaped from a hospital for the criminally insane.",
 "Summary: A group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",
-"Definition: A group of people appointed for a specific function."]
+"Definition: A group of people appointed for a specific function.",
+"A form of body modification where a design is made by inserting ink.",
+"Is a set of phyical phenomena associated with the presence and motion of electric charge."]
 let lives = 7;
 let score = 0;
 document.getElementById('lives').innerHTML = lives;
